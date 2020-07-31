@@ -1,0 +1,13 @@
+<%- include("partials/header") %>
+<p>Description: If you want to help someone ,contact people by looking at there adress given below along with there needs</p>
+<h1>Want to help Someone</h1>
+
+<% post.forEach(function(m){ %>
+  <form  action="/delete" method="post">
+    <div class="">
+    <input type="checkbox" name="checkbox" value="<%=m._id%>" onChange="this.form.submit()" >
+  <h3>address:<%=m.address%></h3>
+  <p>needs:<%=m.needs%></p>
+</div>
+  </form>
+<% }) %>
