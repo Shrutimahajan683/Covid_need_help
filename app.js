@@ -11,7 +11,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.set('view engine', 'ejs');
 const h="CORONA-VIRUS";
 found=[];
-mongoose.connect('mongodb+srv://admin-shruti:Shruti@shruu28@cluster0-9erkx.mongodb.net/projectsDB',{useNewUrlParser: true, useUnifiedTopology: true});
+mongoose.connect('mongodb://localhost:27017/projectsDB',{useNewUrlParser: true, useUnifiedTopology: true});
 const postsSchema=new mongoose.Schema({
   address:String,
   needs:String,
